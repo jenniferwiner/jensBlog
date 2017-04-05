@@ -1,0 +1,15 @@
+<header class="container center-align">
+  <h1>All {{title}}</h1>
+  <a class="btn" href="/posts/create">Create Post</a>
+  <br>
+  <br>
+</header>
+<main>
+  <div class="container">
+    {{#each posts}}
+      <h5><a href='/posts/{{this.id}}'>{{this.title}}</a></h5>
+      <p>Created on {{this.created_at}}</p>
+      <p>{{this.body}}</p>
+    {{/each}}
+  </div>
+</main>
